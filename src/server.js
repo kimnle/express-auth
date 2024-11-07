@@ -16,7 +16,7 @@ let corsOptions = {
     origin: ["http://localhost:3000", "http://localhost:5173", "https://deployedreactapp.com"],
     optionsSuccessStatus: 200
 }
-app.user(cors(corsOptions));
+app.use(cors(corsOptions));
 
 app.get("/", (request, response) => {
     response.json({
